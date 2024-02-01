@@ -10,6 +10,7 @@ namespace Lab3App
     {
         static void Main(string[] args)
         {
+
             // Create a collection board
             CollectionBoard board = new CollectionBoard();
 
@@ -28,8 +29,9 @@ namespace Lab3App
             // One Axe
             possibleCollectiable.Add(new Axe("OnlyAxe"));
 
+
             // One MagicWand
-            possibleCollectiable.Add(new Axe("OnlyMagicWand"));
+            possibleCollectiable.Add(new MagicWand("OnlyMagicWand"));
 
             // Associate the CollectionBoard object to all the possible Collectiables
             // using a foreach loop
@@ -50,11 +52,17 @@ namespace Lab3App
             Console.WriteLine("========================================");
             Console.WriteLine("==== All the Collected items ===========");
             Console.WriteLine("========================================");
+
             //Display all what was collected in a for each loop
             foreach (Collectable collectable in possibleCollectiable)
             {
                 collectable.Display();
             }
+
+
+            Console.ReadLine();
         }
+
     }
+
 }
